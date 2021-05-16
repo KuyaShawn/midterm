@@ -1,0 +1,35 @@
+<include href="views/header.html"></include>
+<body>
+<div class="container">
+    <form action="#" method="post" class="form-horizontal">
+        <h2>Midterm Survey</h2>
+        <div class="form-group row">
+            <label for="name" class="mr-3">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <!-- display an error message if there is one -->
+        <check if="{{ isset(@errors['name']) }}">
+            <span class="err">{{ @errors['name'] }}</span>
+        </check>
+
+        <p class="mt-4">Check all that apply:</p>
+        <div class="col-sm-4">
+            <repeat group="{{ @choice }}" value="{{ @choice }}">
+                <label><input type="checkbox"
+                              name="choices[]"
+                              value="{{ @choice }}"> {{ @choice }}</label><br>
+            </repeat>
+            <!-- display an error message if there is one -->
+            <check if="{{ isset(@errors['choices']) }}">
+                <span class="err">{{ @errors['choices'] }}</span>
+            </check>
+        </div>
+
+        <div class="row column_row mt-4">
+            <input type="submit" class="form-control btn btn-primary rounded" id="btn_size" value="Submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
