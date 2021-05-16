@@ -1,0 +1,12 @@
+{
+  "name": "eabenoja/328/dating",
+  "authors": [
+    {
+      "name": "Eashune Abenojar",
+      "email": "Eabenojar@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
